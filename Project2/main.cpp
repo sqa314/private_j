@@ -22,7 +22,6 @@ int main()
     grid_t grid;
 
     grid.resize(row_count);
-    ;
 
     for (int i = 0; i < row_count; ++i)
     {
@@ -35,17 +34,9 @@ int main()
         }
     }
 
-    for (const auto row_count : grid)
-    {
-        for (const auto node : row_count)
-        {
-            std::cout << node;
-        }
+    const auto& path = find_path(grid, start, goal);
 
-        std::cout << std::endl;
-    }
-
-    if (const auto& path = find_path(grid, start, goal); !path.empty())
+    if (!path.empty())
     {
         print_path(grid, path);
     }

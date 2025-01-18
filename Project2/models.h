@@ -28,6 +28,7 @@ struct point_t
 struct node_t
 {
     point_t point;
+    point_t direction;
     float duration = 0;
     float heuristic = 0;
 };
